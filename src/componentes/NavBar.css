@@ -1,0 +1,28 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.list{
+    color: black;
+    text-decoration: auto;
+    font-family: unset;
+}
+.logo{
+    width: 90px;
+}
+.listaNav{
+    display: flex;
+    flex-direction: row;
+    width: 16%;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+.login{
+    align-self: center;
+    background-color: black;
+    color: white;
+}
