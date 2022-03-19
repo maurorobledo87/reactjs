@@ -1,19 +1,18 @@
 import React from 'react';
 import Logo from '../img/logo.png';
 import './NavBar.css';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
-const NavBar = () => {
+const NavBar = ({children, listaLinks}) => {
     return (
         <nav className='navbar'>
             <a href='./app.js'><img className='logo' alt='logo' src={Logo} /></a>
-            <ul className='listaNav'>
-                <li ><a className='list' href='#'>Fútbol</a></li>
-                <li ><a className='list' href='#'>Basquet</a></li>
-                <li ><a className='list' href='#'>Beisbol</a></li>
-            </ul>
+          
+            {listaLinks.map((elemento,index)=>{
+                return <a key={index} className='list'>{elemento}</a>
+            })}
             <button className='login'>Login</button>
-            <AddShoppingCartIcon />
+            {children}
+            
         </nav>
     );
 };
