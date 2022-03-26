@@ -8,7 +8,7 @@ const NavBar = ({children, listaLinks}) => {
             <a href='./app.js'><img className='logo' alt='logo' src={Logo} /></a>
           
             {listaLinks.map((elemento,index)=>{
-                return <a key={index} className='list'>{elemento}</a>
+                return <a key={index} className='list' href='#'>{elemento}</a>
             })}
             <button className='login'>Login</button>
             {children}
