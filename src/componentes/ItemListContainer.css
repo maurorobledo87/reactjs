@@ -3,8 +3,7 @@
     justify-content: space-around;
 }
 
-.cajaProducto{
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-items: center;
+
+img{
+    width: 185px;
 }
