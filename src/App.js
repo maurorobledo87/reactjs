@@ -2,6 +2,7 @@
 import React from 'react';
 import NavBar from './componentes/NavBar';
 import {ItemListContainer} from './componentes/ItemListContainer';
+import { ItemDetailContainer } from './componentes/ItemDetailContainer';
 
 const App = () => {
   const name = 'Mauro';
@@ -13,7 +14,7 @@ const App = () => {
       <NavBar listaLinks={links} >
       </NavBar>
       <ItemListContainer nombre={name} apellido={lastname} ></ItemListContainer>
-      
+      <ItemDetailContainer></ItemDetailContainer>
     </>
   );
   }
