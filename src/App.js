@@ -1,7 +1,6 @@
 
 import React from 'react';
 import NavBar from './componentes/NavBar';
-import {CartWidget} from './componentes/CartWidget';
 import {ItemListContainer} from './componentes/ItemListContainer';
 
 const App = () => {
@@ -12,7 +11,6 @@ const App = () => {
   return (  
     <>
       <NavBar listaLinks={links} >
-        <CartWidget/>
       </NavBar>
       <ItemListContainer nombre={name} apellido={lastname} ></ItemListContainer>
       

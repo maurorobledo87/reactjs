@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../img/logo.png';
 import './NavBar.css';
+import { CartWidget } from './CartWidget';
 
 const NavBar = ({children, listaLinks}) => {
     return (
@@ -11,8 +12,7 @@ const NavBar = ({children, listaLinks}) => {
                 return <a key={index} className='list' href='#'>{elemento}</a>
             })}
             <button className='login'>Login</button>
-            {children}
-            
+            <CartWidget></CartWidget>            
         </nav>
     );
 };

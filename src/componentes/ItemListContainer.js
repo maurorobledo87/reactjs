@@ -1,6 +1,5 @@
 import React from 'react';
 import './ItemListContainer.css';
-import { ItemCount } from './ItemCount';
 import { ItemList } from './ItemList';
 
 const productosIniciales = [
@@ -16,16 +15,12 @@ setTimeout(() => {
 
 
 export const ItemListContainer = ({nombre, apellido}) => {
-    const onAdd = (cont) => {
-        console.log('agregaste ' + cont + ' productos') 
-    }
+    
     return (
         <>
             <h1 className='saludo'>BIENVENIDO {nombre} {apellido}</h1> 
             <p className='saludo'>Disfruta de nuestros productos</p>
-            <ItemList arrayProductos={promesa}></ItemList>
-            
-            <ItemCount stock={10} initial={0} funcion={onAdd}></ItemCount>
+            <ItemList arrayProductos={promesa}></ItemList>            
         </>
     )
 }

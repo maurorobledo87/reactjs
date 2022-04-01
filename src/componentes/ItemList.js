@@ -25,11 +25,26 @@ export const ItemList  = ({arrayProductos}) => {
             </div>
         )
     })
+
+    const onAdd = (cont) => {
+        console.log('agregaste ' + cont + ' productos') 
+    }
+
     return (
         <> 
-        {
-            show ?  <Item producto={mostrarProducto}></Item>
+        <div className='cajaProducto'>
+       { 
+       show ?  
+       productos.map((elemento, index)=>{
+           return(
+            <Item {...elemento} onAdd={onAdd} key={index}></Item>
+        );
+        })
             : <p>Loading...</p>
+            }
+        </div>
+        {
+            
         }
        
         </>)
