@@ -3,7 +3,8 @@
     border: 1px solid;
     width: 25%;
     box-shadow: 4px 5px rgba(145, 105, 105, 0.20);
-    
+    padding: 2%;
+    margin-bottom: 3%;
 }
 .cardContainer{    
     text-align: -webkit-center;

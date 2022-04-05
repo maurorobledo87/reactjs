@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import {ItemDetail} from './ItemDetail';
 
-let api = fetch('https://mocki.io/v1/d0fc5fa2-6ec8-4707-83f0-7055af3b9901')
+let api = fetch('https://mocki.io/v1/08a4734e-7caa-4120-8fb6-6cc6024bb5b7')
 .then((response)=>response.json())
 .then((apiJson)=>{
 api = apiJson
@@ -15,14 +16,17 @@ const promise = new Promise((res)=>{
 
 export const ItemDetailContainer = () => {
     const [productoDetalle, setProductoDetalle] = useState([]);
+    const {id} = useParams();
+    // const getItems = async
     useEffect(()=>{
         promise.then(()=>{
-            setProductoDetalle(api);
+            const filtrado = api.filter((a)=>{return a.id === Number(id)})
+            setProductoDetalle(filtrado);
         })
         .catch(()=>{
             console.log('Error')
         })
-    },[]);
+    },[id]);
     return (
         <>
         <div className="cardContainer">
@@ -30,7 +34,7 @@ export const ItemDetailContainer = () => {
             productoDetalle.map((productoJson)=>{
                 return(
                     <>
-                    <ItemDetail {...productoJson}></ItemDetail>
+                    <ItemDetail {...productoJson} key={productoJson.id}></ItemDetail>
                     </>
                 )
             })
