@@ -5,10 +5,6 @@ import { Item } from './Item';
 
 export const ItemList  = ({arrayProductos}) => {
 
-    const onAdd = (cont) => {
-        console.log('agregaste ' + cont + ' productos') 
-    }
-
     return (
         <> 
         <div className='cajaProducto'>
@@ -16,7 +12,7 @@ export const ItemList  = ({arrayProductos}) => {
         arrayProductos.map((elemento, index)=>{
             return(
                 <NavLink to={'/producto/'+elemento.id} key={index}>
-                    <Item {...elemento} onAdd={onAdd} />
+                    <Item {...elemento} />
                 </NavLink>
                 );
             })

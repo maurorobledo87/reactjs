@@ -32,10 +32,8 @@ export const ItemDetailContainer = () => {
         <div className="cardContainer">
             {
             productoDetalle.map((productoJson)=>{
-                return(
-                    <>
+                return(                    
                     <ItemDetail {...productoJson} key={productoJson.id}></ItemDetail>
-                    </>
                 )
             })
             }

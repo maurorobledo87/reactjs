@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
  
 
-export const ItemCount = ({stock, initial, funcion }) => {
+export const ItemCount = ({stock, initial, onAdd, productoCarrito }) => {
     const [contador, setContador] = useState (1);
     const sumar = () => {
         if (contador < stock) {
@@ -17,16 +17,18 @@ export const ItemCount = ({stock, initial, funcion }) => {
         }
     }
     const agregarAlCarrito = () => {
-        funcion(contador);
+        onAdd(contador); 
+        console.log(productoCarrito)
     }
     return (
         <>
         <h1>{contador}</h1>
         <button onClick={sumar}>sumar</button>
         <button onClick={restar}>restar</button>
-        <button onClick={agregarAlCarrito} >Agregar al carrito </button>
+        <button onClick={()=>agregarAlCarrito(contador)}> Agregar al carrito </button>
 
         </>
     )
+
 }
 
