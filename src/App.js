@@ -5,6 +5,7 @@ import {ItemListContainer} from './componentes/ItemListContainer';
 import { ItemDetailContainer } from './componentes/ItemDetailContainer';
 import {BrowserRouter,Routes, Route} from 'react-router-dom';
 import { Cart } from './componentes/Cart';
+import CustomProvider from './componentes/CartContext';
 
 const App = () => {
   const name = 'Mauro';
@@ -17,13 +18,15 @@ const App = () => {
   // const objetosArray = [{nombre: 'Argentina', precio:10000}, {nombre: 'Argentina alternativa', precio:11500}, {nombre:'Real Madrid', precio:9000}]
   return (  
     <BrowserRouter>
-      <NavBar listaLinks={links} />
-      <Routes>
-        <Route path="/" element= {<ItemListContainer nombre={name} apellido={lastname}/>}/>
-        <Route path="/categorias/:name" element= {<ItemListContainer nombre={name} apellido={lastname}/>}/>
-        <Route path="/producto/:id" element= {<ItemDetailContainer/>}/>
-        <Route path="/cart" element= {<Cart/>} />
-      </Routes>
+      <CustomProvider>      
+        <NavBar listaLinks={links} />
+        <Routes>
+          <Route path="/" element= {<ItemListContainer nombre={name} apellido={lastname}/>}/>
+          <Route path="/categorias/:name" element= {<ItemListContainer nombre={name} apellido={lastname}/>}/>
+          <Route path="/producto/:id" element= {<ItemDetailContainer/>}/>
+          <Route path="/cart" element= {<Cart/>} />
+        </Routes>
+      </CustomProvider>
     </BrowserRouter>
   );
   }
