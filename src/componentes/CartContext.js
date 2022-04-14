@@ -14,16 +14,15 @@ const CustomProvider = ({children}) => {
            quantity
        };
        if(isInCart(item.id)){
-        const productFind = cart.find(item => item.id === newProduct.id);
-        const index = cart.indexOf(productFind);
-        const aux = [...cart];
+           const productFind = cart.find(item => item.id === newProduct.id);
+           const index = cart.indexOf(productFind);
+           const aux = [...cart];
         aux[index].quantity += quantity;   
         setCart(aux);
     }   else{
-        cart.precio += Number(item.precio);
         setCart([...cart, newProduct]);
     }
-    // getCantidadProducts();
+        cart.precio += Number(item.precio);
     };
 
     const removeItem = (id) => {
@@ -44,7 +43,8 @@ const CustomProvider = ({children}) => {
 
     const [total, setTotal] = useState(0);
 
-    const getTotalCarrito = (precio) => {
+    const getTotalCarrito = (precio, qty) => {
+        precio = precio * qty;
         setTotal(total + precio);
     }
 

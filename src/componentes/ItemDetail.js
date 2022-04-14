@@ -14,7 +14,7 @@ export const ItemDetail = ({productoJson})=>{
         addItem(productoJson,contador);
         setFinalizarCompra(false);
         isInCart(productoJson.id);
-        getTotalCarrito(Number(productoJson.precio));
+        getTotalCarrito(Number(productoJson.precio), contador);
         getCantidadProducts();
     }
 

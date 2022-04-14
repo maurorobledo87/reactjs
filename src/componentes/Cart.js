@@ -5,13 +5,11 @@ import { NavLink } from "react-router-dom";
 import './Cart.css';
 
 export const Cart = () => {
-    const {cart, removeItem, clear, cantProductos, total} = useContext(contexto);
-    // const [carritoVacio, setCarritoVacio] = useState(true);
+    const {cart, removeItem, clear, total} = useContext(contexto);
 
     const deleteElement = (id) =>{
         removeItem(id);
     }
-
     const vaciarCarrito = () => {
         clear();
     }
@@ -28,23 +26,11 @@ export const Cart = () => {
         )
     })
 
-    // if(productoCarrito){
-
-    //     setCarritoVacio(false);
-
-    // }
-
     return(
        <div className="cartContainer">
-            <p>Cant productos: {cantProductos}</p>
-            {/* {
-                carritoVacio ?  */}
                     <div>
                         {productoCarrito}
                     </div>
-                    {/* :
-                    <p>No hay productos en el carrito</p>
-            } */}
             <p>TOTAL: {total}</p>
             <button className="btnCarrito" onClick={vaciarCarrito}>Vaciar Carrito</button>
             <NavLink to={'/'}>
