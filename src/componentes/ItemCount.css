@@ -1,0 +1,9 @@
+.sumaRestaProd{
+    display: flex;
+    place-content: center;
+    align-items: center;
+}
+
+.cantidadProductos{
+    padding: 10px;
+}

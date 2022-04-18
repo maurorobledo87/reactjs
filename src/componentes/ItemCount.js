@@ -1,33 +1,66 @@
-import React, {useState} from 'react';
- 
+import React, { useState } from 'react';
+import './ItemCount.css'
 
-export const ItemCount = ({stock, initial, onAdd, productoCarrito }) => {
-    const [contador, setContador] = useState (1);
-    const sumar = () => {
-        if (contador < stock) {
-            setContador (contador + 1);
-            } else {
-                console.log('no hay mas stock')
-            }
+export const ItemCount = ({stock, initial, onAdd}) => {
 
-    }
-    const restar = () => {
-        if (contador > initial) {
-        setContador (contador - 1)
+   const [contador, setContador] = useState(initial);  
+
+    const sumador = () =>{
+
+        if(contador < stock){
+
+            setContador(contador + 1);
+
+        } else{
+
+            alert('No hay mas stock');
+
         }
-    }
+
+    };
+
+    const restador = () => {
+
+        if(contador > initial){
+
+            setContador(contador - 1);
+
+       }
+
+    };
+
     const agregarAlCarrito = () => {
-        onAdd(contador); 
-        console.log(productoCarrito)
+
+        onAdd(contador);
+
     }
-    return (
+
+   return(       
+
         <>
-        <h1>{contador}</h1>
-        <button onClick={sumar}>sumar</button>
-        <button onClick={restar}>restar</button>
-        <button onClick={()=>agregarAlCarrito(contador)}> Agregar al carrito </button>
+
+        <div className='calculadoraContainer' id='calculadora'>
+
+            <div className='sumaRestaProd'>
+
+                <button className='btnCarrito sumRes' onClick={restador}>-</button>
+
+                <p className='cantidadProductos'>{contador}</p>
+
+                <button className='btnCarrito sumRes' onClick={sumador}>+</button>
+
+            </div>
+
+            <div className='btnComprarResetear'>
+
+                <button className='btnCarrito btnCompraReset' onClick={()=>agregarAlCarrito(contador)} contador={contador}>Agregar al carrito</button>
+
+            </div>
+
+        </div>
 
         </>
+
     )
 
 }

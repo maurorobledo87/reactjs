@@ -1,0 +1,11 @@
+.carritoCant{
+    display: flex;
+    align-items: center;
+}
+
+.cantCarrito{
+    text-decoration: none;
+    background: #e97171;
+    border-radius: 50%;
+    padding: 5px;
+}
