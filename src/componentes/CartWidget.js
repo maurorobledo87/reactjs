@@ -8,35 +8,20 @@ export const CartWidget = () => {
     const [carroVacio, setCarroVacio] = useState(false);
 
     useEffect(()=>{
-
         if(counter === 0){
-
             setCarroVacio(false)
-
         } else if(counter > 0){
-
             setCarroVacio(true)
-
         }
-
     }, [counter]);
 
     return(
-
         <div className='carritoCant'>
-
             <AddShoppingCartIcon className='iconoCarrito' />
-
             {
-
                carroVacio &&
-
                 <p className='cantCarrito'>{counter}</p>
-
             }
-
         </div>
-
     )
-
 }
