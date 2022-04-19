@@ -4,32 +4,31 @@ import { ItemCount } from './ItemCount';
 import { NavLink } from "react-router-dom";
 import { contexto } from "./CartContext";
 
-export const ItemDetail = ({productoJson})=>{
+export const ItemDetail = ({productoDetalle})=>{
     
     const {addItem, isInCart, getCantidadProducts, getTotalCarrito } = useContext(contexto);
-
     const [finalizarCompra, setFinalizarCompra] = useState(true);
 
     const onAdd = (contador) => {
-        addItem(productoJson,contador);
+        addItem(productoDetalle,contador);
         setFinalizarCompra(false);
-        isInCart(productoJson.id);
-        getTotalCarrito(Number(productoJson.precio), contador);
+        isInCart(productoDetalle.id);
+        getTotalCarrito(Number(productoDetalle.precio), contador);
         getCantidadProducts();
     }
 
     return (
         <>
-            <div className="cardDetalle" id={productoJson.id}>
-                <img src={productoJson.img} alt='imagen-producto'/>
-                <h1>{productoJson.nombre}</h1>
-                <p>Stcok disponible: {productoJson.stock}</p>
-                <p>Material: {productoJson.material}</p>
-                <p>Precio: {productoJson.precio}</p>
+            <div className="cardDetalle" id={productoDetalle.id}>
+                <img src={productoDetalle.img} alt='imagen-producto'/>
+                <h1>{productoDetalle.nombre}</h1>
+                <p>Stcok disponible: {productoDetalle.stock}</p>
+                <p>Material: {productoDetalle.material}</p>
+                <p>Precio: {productoDetalle.precio}</p>
             </div>
                {
                     finalizarCompra ?
-                        <ItemCount stock={productoJson.stock} initial={1} nombre={productoJson.nomb} precio={productoJson.precio} id={productoJson.id} onAdd={onAdd}/>
+                        <ItemCount stock={productoDetalle.stock} initial={1} nombre={productoDetalle.nomb} precio={productoDetalle.precio} id={productoDetalle.id} onAdd={onAdd}/>
                     :
                     <>
                         <NavLink to={'/cart'}>

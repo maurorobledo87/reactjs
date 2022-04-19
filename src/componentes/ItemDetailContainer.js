@@ -1,43 +1,41 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import {ItemDetail} from './ItemDetail';
-
-let api = fetch('https://mocki.io/v1/08a4734e-7caa-4120-8fb6-6cc6024bb5b7')
-.then((response)=>response.json())
-.then((apiJson)=>{
-api = apiJson
-})
-
-const promise = new Promise((res)=>{
-    setTimeout(() => {
-        res(api)
-    }, 2000);
-}) 
+import { ItemDetail } from "./ItemDetail";
+import { useParams } from 'react-router-dom';
+import { db } from './firebase/firebase'
+import {getDoc, collection, doc} from 'firebase/firestore';
 
 export const ItemDetailContainer = () => {
+
     const [productoDetalle, setProductoDetalle] = useState([]);
-    const {id} = useParams();
-    // const getItems = async
-    useEffect(()=>{
-        promise.then(()=>{
-            const filtrado = api.filter((a)=>{return a.id === Number(id)})
-            setProductoDetalle(filtrado);
+    const [loading, setLoading] = useState(true);       
+    const { id } = useParams();
+
+    useEffect(() => {
+        const productsCollection = collection(db, "productos");
+        const refDoc = doc(productsCollection,id);
+        getDoc(refDoc)
+        .then((result) => {
+            const produ = {
+               id,
+                ...result.data()
+            }
+            setProductoDetalle(produ);
+            setLoading(!loading);
         })
         .catch(()=>{
             console.log('Error')
         })
-    },[id]);
+    }, [id]);
+
     return (
         <>
-        <div className="cardContainer">
-            {
-            productoDetalle.map((productoJson)=>{
-                return(                    
-                    <ItemDetail productoJson={productoJson} key={productoJson.id}></ItemDetail>
-                )
-            })
-            }
-        </div>
+            <div className="cardContainer">
+                { loading ?
+                    <p>Loading...</p>
+                    :
+                    <ItemDetail productoDetalle={productoDetalle} />
+                }
+            </div>
         </>
-    )
+        )
 }
