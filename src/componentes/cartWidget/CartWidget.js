@@ -1,7 +1,7 @@
 import React, {useState,useContext, useEffect} from 'react';
 import './CartWidget.css';
 import AddShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { contexto } from "./CartContext";
+import { contexto } from "../cartContext/CartContext";
 
 export const CartWidget = () => {
     const {counter} = useContext(contexto);

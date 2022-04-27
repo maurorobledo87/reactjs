@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import './ItemListContainer.css';
+import '../itemListContainer/ItemListContainer.css';
 import {getDocs, collection, query, where, orderBy} from 'firebase/firestore';
-import { ItemList } from './ItemList';
+import { ItemList } from '../itemList/ItemList';
 import { useParams } from 'react-router-dom';
-import { db } from './firebase/firebase'
+import { db } from '../../firebase/firebase';
 
     export const ItemListContainer = ({nombre, apellido}) => {
 

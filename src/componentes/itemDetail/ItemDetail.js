@@ -1,8 +1,8 @@
 import React, {useState, useContext} from "react";
 import './ItemDetail.css';
-import { ItemCount } from './ItemCount';
+import { ItemCount } from '../itemCount/ItemCount';
 import { NavLink } from "react-router-dom";
-import { contexto } from "./CartContext";
+import { contexto } from "../cartContext/CartContext";
 
 export const ItemDetail = ({productoDetalle})=>{
     

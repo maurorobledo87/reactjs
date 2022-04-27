@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Item } from './Item';
+import { Item } from '../item/Item';
 
 export const ItemList  = ({productos}) => {
     return (

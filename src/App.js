@@ -1,11 +1,11 @@
 
 import React from 'react';
-import NavBar from './componentes/NavBar';
-import {ItemListContainer} from './componentes/ItemListContainer';
-import { ItemDetailContainer } from './componentes/ItemDetailContainer';
+import NavBar from './componentes/navBar/NavBar';
+import {ItemListContainer} from './componentes/itemListContainer/ItemListContainer';
+import { ItemDetailContainer } from './componentes/itemDetailContainer/ItemDetailContainer';
 import {BrowserRouter,Routes, Route} from 'react-router-dom';
-import { Cart } from './componentes/Cart';
-import CustomProvider from './componentes/CartContext';
+import { Cart } from './componentes/cart/Cart';
+import CustomProvider from './componentes/cartContext/CartContext';
 
 const App = () => {
   const name = 'Mauro';
