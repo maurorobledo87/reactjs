@@ -5,7 +5,7 @@ import {ItemListContainer} from './componentes/itemListContainer/ItemListContain
 import { ItemDetailContainer } from './componentes/itemDetailContainer/ItemDetailContainer';
 import {BrowserRouter,Routes, Route} from 'react-router-dom';
 import { Cart } from './componentes/cart/Cart';
-import CustomProvider from './componentes/cartContext/CartContext';
+import CustomProvider from './cartContext/CartContext';
 
 const App = () => {
   const name = 'Mauro';

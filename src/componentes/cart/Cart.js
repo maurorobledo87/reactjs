@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState} from "react";
-import { contexto } from "../cartContext/CartContext";
+import { contexto } from "../../cartContext/CartContext";
 import './Cart.css';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { NavLink } from "react-router-dom";
