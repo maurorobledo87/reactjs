@@ -36,5 +36,5 @@ _Herramientas utilizadas para crear el proyecto_
 * [Mui](https://mui.com/material-ui/getting-started/installation/) - Libreria de Iconos
 * [Firebase](https://console.firebase.google.com/project/deco-home-b9f06/firestore/data/~2Fproductos?hl=es) - Firestore database
 
-## Hecho por 
+## Alumno
 * **Mauro Robledo** - *Desarrollo del proyecto* 
