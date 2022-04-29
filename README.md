@@ -13,7 +13,7 @@ _Paso a paso para correr la aplicación localmente_
 _Debes clonar el repositorio_
 
 ```
-https://github.com/carbis1992/homedecoBisagni.git
+https://github.com/maurorobledo87/sportshirtRobledo.git
 ```
 
 _En VSC abrir la consola y_
