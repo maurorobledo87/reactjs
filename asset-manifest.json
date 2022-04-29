@@ -1,7 +1,7 @@
 {
   "main.css": "/sportshirtRobledo/static/css/main.665c1cad.chunk.css",
-  "main.js": "/sportshirtRobledo/static/js/main.0aa77cbc.chunk.js",
-  "main.js.map": "/sportshirtRobledo/static/js/main.0aa77cbc.chunk.js.map",
+  "main.js": "/sportshirtRobledo/static/js/main.5b9b2654.chunk.js",
+  "main.js.map": "/sportshirtRobledo/static/js/main.5b9b2654.chunk.js.map",
   "static/js/1.aa1ecd07.chunk.js": "/sportshirtRobledo/static/js/1.aa1ecd07.chunk.js",
   "static/js/1.aa1ecd07.chunk.js.map": "/sportshirtRobledo/static/js/1.aa1ecd07.chunk.js.map",
   "static/js/2.cfc66b6d.chunk.js": "/sportshirtRobledo/static/js/2.cfc66b6d.chunk.js",
@@ -11,6 +11,6 @@
   "static/media/logo.png": "/sportshirtRobledo/static/media/logo.71434506.png",
   "static/css/main.665c1cad.chunk.css.map": "/sportshirtRobledo/static/css/main.665c1cad.chunk.css.map",
   "index.html": "/sportshirtRobledo/index.html",
-  "precache-manifest.08ad4a8f0fdcc23b4780b94b5a616d89.js": "/sportshirtRobledo/precache-manifest.08ad4a8f0fdcc23b4780b94b5a616d89.js",
+  "precache-manifest.ed348dd92a6077879f22de5944ed059e.js": "/sportshirtRobledo/precache-manifest.ed348dd92a6077879f22de5944ed059e.js",
   "service-worker.js": "/sportshirtRobledo/service-worker.js"
 }
