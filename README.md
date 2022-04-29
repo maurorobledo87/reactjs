@@ -34,7 +34,7 @@ _Herramientas utilizadas para crear el proyecto_
 
 * [React](https://reactjs.org) - El framework web usado
 * [Mui](https://mui.com/material-ui/getting-started/installation/) - Libreria de Iconos
-* [Firebase](https://console.firebase.google.com/project/deco-home-b9f06/firestore/data/~2Fproductos?hl=es) - Firestore database
+* [Firebase](https://console.firebase.google.com/project/sportshirt-96685/firestore/data/~2Fproductos~2F47lNLuUWX1HI90eFoLAN?hl=es-419) - Firestore database
 
 ## Alumno
 * **Mauro Robledo** - *Desarrollo del proyecto* 
