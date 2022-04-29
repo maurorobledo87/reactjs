@@ -34,7 +34,7 @@ export const ItemDetail = ({productoDetalle})=>{
                         <NavLink to={'/cart'}>
                                 <button className='btnCarrito btnFinalizarCompra' >Ir al carrito</button>
                         </NavLink>
-                        <NavLink to={'/'}>
+                        <NavLink to={'/sportshirtRobledo'}>
                             <button className='btnCarrito btnFinalizarCompra'>Seguir comprando</button>
                         </NavLink>
                     </>

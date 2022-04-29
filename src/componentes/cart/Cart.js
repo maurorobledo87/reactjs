@@ -79,7 +79,7 @@ export const Cart = () => {
                     <p>TOTAL: {total}</p>
                     <button className="btnCarrito vaciarCarritoBtn" onClick={vaciarCarrito}>Vaciar Carrito</button>
                     <button className='btnCarrito finalizarBtn' onClick={handleFinalize}>Finalizar Compra</button>
-                    <NavLink to={'/'}>
+                    <NavLink to={'/sportshirtRobledo'}>
                         <button className='btnCarrito'>Volver al inicio</button>
                     </NavLink>
                 </> 
@@ -88,7 +88,7 @@ export const Cart = () => {
                 noHayProductosEnElCarrito &&
                 <>
                     <h1>No hay productos en el carrito</h1>
-                    <NavLink to={'/'}>
+                    <NavLink to={'/sportshirtRobledo'}>
                         <button className='btnCarrito'>Volver al inicio</button>
                     </NavLink>
                 </>
@@ -98,7 +98,7 @@ export const Cart = () => {
                 <>    
                     <Formulario finalizarCompra={finalizarCompra}></Formulario>   
                     <strong>ID Venta: {idVenta}</strong><br></br>
-                    <NavLink to={'/'}>
+                    <NavLink to={'/sportshirtRobledo'}>
                         <button className='btnCarrito volverForm'>Volver al inicio</button>
                     </NavLink>
                 </> 

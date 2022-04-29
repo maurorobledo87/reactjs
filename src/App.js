@@ -21,7 +21,7 @@ return (
       <CustomProvider>      
         <NavBar listaLinks={links} />
         <Routes>
-          <Route path="/" element= {<ItemListContainer nombre={name} apellido={lastname}/>}/>
+          <Route path="/sportshirtRobledo" element= {<ItemListContainer nombre={name} apellido={lastname}/>}/>
           <Route path="/categorias/:name" element= {<ItemListContainer nombre={name} apellido={lastname}/>}/>
           <Route path="/producto/:id" element= {<ItemDetailContainer/>}/>
           <Route path="/cart" element= {<Cart/>} />
