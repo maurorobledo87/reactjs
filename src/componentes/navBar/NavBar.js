@@ -6,16 +6,18 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = ({listaLinks}) => {
     return (
-        <nav className='navbar'>
-            <NavLink to={''}><img className='logo' alt='logo' src={Logo} /></NavLink>
-          
-            {listaLinks.map((elemento)=>{
-                return <NavLink to={elemento.route} key={elemento.id} className='list'>{elemento.name}</NavLink>
-            })}
-            <NavLink to={"/cart"}>
-                <CartWidget/>
-            </NavLink>                                 
-        </nav>
+        <NavLink to={'/sportshirtRobledo'}>
+            <nav className='navbar'>
+                <NavLink to={'/sportshirtRobledo'}><img className='logo' alt='logo' src={Logo} /></NavLink>
+            
+                {listaLinks.map((elemento)=>{
+                    return <NavLink to={elemento.route} key={elemento.id} className='list'>{elemento.name}</NavLink>
+                })}
+                <NavLink to={"/cart"}>
+                    <CartWidget/>
+                </NavLink>                                 
+            </nav>
+        </NavLink>
     );
 };
 export default NavBar; 
