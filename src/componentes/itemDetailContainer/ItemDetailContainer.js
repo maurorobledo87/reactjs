@@ -28,7 +28,6 @@ export const ItemDetailContainer = () => {
     }, [id]);
 
     return (
-        <>
             <div className="cardContainer">
                 { loading ?
                     <p>Loading...</p>
@@ -36,6 +35,5 @@ export const ItemDetailContainer = () => {
                     <ItemDetail productoDetalle={productoDetalle} />
                 }
             </div>
-        </>
         )
 }

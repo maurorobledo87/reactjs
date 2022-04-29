@@ -12,11 +12,9 @@ const NavBar = ({listaLinks}) => {
             {listaLinks.map((elemento)=>{
                 return <NavLink to={elemento.route} key={elemento.id} className='list'>{elemento.name}</NavLink>
             })}
-            <NavLink className='login' to={''}>Login</NavLink>
             <NavLink to={"/cart"}>
                 <CartWidget/>
-            </NavLink>         
-                        
+            </NavLink>                                 
         </nav>
     );
 };

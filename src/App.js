@@ -15,8 +15,8 @@ const App = () => {
     {name:'Básquet', route:"categorias/basquet", id:2},
     {name:'Fórmula 1', route:"categorias/formula1", id:3},
 ]
-  // const objetosArray = [{nombre: 'Argentina', precio:10000}, {nombre: 'Argentina alternativa', precio:11500}, {nombre:'Real Madrid', precio:9000}]
-  return (  
+
+return (  
     <BrowserRouter>
       <CustomProvider>      
         <NavBar listaLinks={links} />
