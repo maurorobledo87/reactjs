@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/sportshirtRobledo/precache-manifest.ed348dd92a6077879f22de5944ed059e.js"
+  "/sportshirtRobledo/precache-manifest.2002c35ed712a2bf1ba3bd194ccf8aff.js"
 );
 
 workbox.clientsClaim();
